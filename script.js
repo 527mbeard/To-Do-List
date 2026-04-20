@@ -34,7 +34,7 @@ function displayTasks() {
         //add styling
         li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center')
         //set the innerHTML of the task list to the new list items
-        li.innerHTML = `${task} <button class="btn btn-danger btn-sm" onclick='removeTask(${index})'>✅</button>`
+        li.innerHTML = `${task} <button class="btn btncheck btn-sm" onclick='removeTask(${index})'>✅</button>`
         //append the new list items to the task list element
         taskList.appendChild(li)
     })

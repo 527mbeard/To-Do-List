@@ -1,0 +1,50 @@
+body{
+    background-color:#fae630;
+}
+
+.maintodo{
+    background-color: #00bfc3;
+    border: 2px solid black;
+}   
+
+.form-control{
+    background-color: #ff2273;
+    border: 2px solid black;
+}
+.form-control:focus{
+    background-color: #4e22ff;
+    border: 2px solid black;
+    box-shadow: none;
+    color: white;
+}
+
+.btnside{
+    background-color: #fae630;
+    color: black;
+    border: 2px solid black;
+}
+
+.btnside:hover{
+    background-color: #fff27e;
+    color: black;
+}
+
+.btncheck{
+    background-color: #fae630;
+    color: black;
+    border: 2px solid black;
+}
+
+.btncheck:focus{
+    background-color: #4e22ff;
+    border: 2px solid black;
+    box-shadow: none;
+    color: white;
+}
+
+.btncheck:hover{
+    background-color: #ff2273;
+    border: 2px solid black;
+    box-shadow: none;
+    color: white;
+}

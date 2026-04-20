@@ -2,11 +2,14 @@
 <html lang="en" data-bs-theme="light">
 
 <head>
-    <title>Title</title>
+    <title>90s To-Do List</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <!-- Bootstrap CSS v5.3.8 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
@@ -21,26 +24,22 @@
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
                 <h2 class="text-center"> To-Do List </h2>
-                <div class="row">
-                    <div class="col-8">
+                <div class="row maintodo">
+                    <div class="col-6 mt-4">
                         <input type="text" id="taskInput" class="form-control" placeholder="Enter a new task" />
                     </div>
-                    <div class="col-4">
-                        <button id="addTaskBtn" class="btn btn-primary w-100">Add Task</button>
+                    <div class="col-3 mt-4">
+                        <button id="addTaskBtn" class="btn btnside w-100">Add Task</button>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 mt-4">
+                    <div class="col-3 mt-4">
+                        <button id="clearTasksBtn" class="btn btnside">Clear All Tasks</button>
+                    </div>
+                    <div class="col-12 mt-4 mb-4">
                         <ul id="taskList" class="list-group"></ul>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <button id="clearTasksBtn" class="btn btn-danger w-100 mt-3">Clear All Tasks</button>
-                    </div>
-                </div>
+                </div> 
             </div>
-        </div> 
+        </div>
     </main>
     <footer>
         <!-- place footer here -->
