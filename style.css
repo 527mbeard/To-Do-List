@@ -70,7 +70,16 @@ body {
     background-color: #4e22ff;
     border: 2px solid black;
     margin: 4px 0px 4px;
-    color:white;
+    color: white;
+}
+
+.taskback:hover {
+    background: #001f1f;
+    transform: scale(1.03);
+    transition: all 0.3s ease-in-out;
+    /* duration and easing */
+    transform: scale(1.05);
+    /* smooth enlargement */
 }
 
 h1 {
@@ -82,7 +91,7 @@ h1 {
 }
 
 .h2text {
-    font-size: 20px;
+    font-size: 15px;
     font-family: "dita", sans-serif;
     font-weight: 400;
     font-style: normal;
