@@ -1,14 +1,10 @@
 let tasks = [] // Array to hold tasks
+let input = document.getElementById('taskInput');
+
 
 document.getElementById('addTaskBtn').addEventListener('click', function () {
     //get value from input field
     let taskInput = document.getElementById('taskInput').value
-
-    //check if input is empty
-    // if (taskInput.trim() === '') {
-    //     alert('Please enter a task')
-    //     return
-    // }
 
     if (taskInput) {
         //add task to array
@@ -18,9 +14,10 @@ document.getElementById('addTaskBtn').addEventListener('click', function () {
         //render tasks to the list
         displayTasks()
     }
-
-
+    input.focus();
 })
+
+
 
 document.getElementById('taskInput').addEventListener('keydown', (e) => {
 
@@ -28,12 +25,6 @@ document.getElementById('taskInput').addEventListener('keydown', (e) => {
 
         //get value from input field
         let taskInput = document.getElementById('taskInput').value
-
-        //check if input is empty
-        // if (taskInput.trim() === '') {
-        //     alert('Please enter a task')
-        //     return
-        // }
 
         if (taskInput) {
             //add task to array
@@ -60,7 +51,7 @@ function displayTasks() {
         //add styling
         li.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center', 'taskback')
         //set the innerHTML of the task list to the new list items
-        li.innerHTML = `${task} <button class="btn btncheck btn-sm" onclick='removeTask(${index})'>✅</button>`
+        li.innerHTML = `${task} <button class="btn btncheck btn-sm" onclick='removeTask(${index})'>☆</button>`
         //append the new list items to the task list element
         taskList.appendChild(li)
     })
@@ -75,3 +66,16 @@ document.getElementById('clearTasksBtn').addEventListener('click', function () {
     tasks = []
     displayTasks()
 })
+
+// document.getElementById('addTaskBtn').addEventListener('click', function () {
+//     if (addTaskBtn) return;
+
+//     let input = document.getElementById("taskInput");
+//     let guess = input.value();
+//     input.value = "";
+
+//     if (guessedLetters.includes(taskInput)) {
+//         setMessage("You have already whispered that letter.");
+//         return;
+//     }
+// })

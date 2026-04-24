@@ -16,7 +16,7 @@ body {
 }
 
 .form-control {
-    background-color: #ff2273;
+    background-color: #4e22ff;
     border: 2px solid black;
     color: white;
     padding: 15px 10px 15px 10px;
@@ -34,23 +34,23 @@ body {
     border: 2px solid black;
     box-shadow: none;
     color: white;
-}
+} 
 
 .btnside {
     background-color: #fae630;
     color: black;
     border: 2px solid black;
-    /* padding:10px 0px 14px; */
+    height:100%;
 }
 
 .btnside:hover {
     background-color: #fff27e;
     color: black;
-    font-weight: bold;
     transition: all 0.3s ease-in-out;
     /* duration and easing */
     transform: scale(1.05);
     /* smooth enlargement */
+    box-shadow: 3px 3px 0px black;
 }
 
 .btncheck {
@@ -67,19 +67,27 @@ body {
 }
 
 .taskback {
-    background-color: #4e22ff;
-    border: 2px solid black;
+    background-color: #ff2273;
+    border: 2px solid black !important;
     margin: 4px 0px 4px;
     color: white;
+    animation: popIn 0.25s ease-out;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .taskback:hover {
     background: #001f1f;
-    transform: scale(1.03);
     transition: all 0.3s ease-in-out;
-    /* duration and easing */
-    transform: scale(1.05);
-    /* smooth enlargement */
 }
 
 h1 {
