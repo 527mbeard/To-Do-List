@@ -7,6 +7,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-position-y: -3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .maintodo {
@@ -34,13 +35,13 @@ body {
     border: 2px solid black;
     box-shadow: none;
     color: white;
-} 
+}
 
 .btnside {
     background-color: #fae630;
     color: black;
     border: 2px solid black;
-    height:100%;
+    height: 100%;
 }
 
 .btnside:hover {
@@ -79,6 +80,7 @@ body {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -89,6 +91,29 @@ body {
     background: #001f1f;
     transition: all 0.3s ease-in-out;
 }
+
+.taskback span {
+    margin-left: 5px;
+}
+
+/* dragging */
+.taskback {
+    cursor: grab;
+}
+
+.taskback:active {
+    cursor: grabbing;
+}
+
+#taskList li {
+    transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.taskback {
+    will-change: transform;
+}
+
+/* dragging */
 
 h1 {
     font-family: "industry-inc-stencil", sans-serif;
@@ -103,4 +128,102 @@ h1 {
     font-family: "dita", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+#taskCounter {
+    font-family: "industry-inc-stencil", sans-serif;
+    background: #fae630;
+    border: 2px solid black;
+    padding: 5px;
+    transition: transform 0.2s ease;
+}
+
+.completed {
+    background-color: #001f1f !important;
+    color: #aaa !important;
+    text-decoration: line-through;
+}
+
+/* dark mode  */
+
+.btntoggle {
+    display: block;
+    margin: 0 auto;
+}
+
+body.dark-mode {
+    background-image: none;
+    background-color: #0b0f0c;
+    color: #00ff66;
+}
+
+/* main container */
+body.dark-mode .maintodo {
+    background-color: #111;
+    border: 2px solid #00ff66;
+}
+
+/* input field */
+body.dark-mode .form-control {
+    background-color: #000;
+    border: 2px solid #00ff66;
+    color: #00ff66;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #00ff66;
+}
+
+/* side buttons */
+body.dark-mode .btnside {
+    background-color: #000;
+    color: #00ff66;
+    border: 2px solid #00ff66;
+}
+
+body.dark-mode .btnside:hover {
+    background-color: #00ff66;
+    color: #000;
+    box-shadow: 0 0 10px #00ff66;
+}
+
+/* task buttons */
+body.dark-mode .btncheck {
+    background-color: #000;
+    color: #00ff66;
+    border: 2px solid #00ff66;
+}
+
+body.dark-mode .btncheck:hover {
+    background-color: #00ff66;
+    color: #000;
+}
+
+/* tasks */
+body.dark-mode .taskback {
+    background-color: #111 !important;
+    border: 2px solid #00ff66 !important;
+    color: #00ff66;
+}
+
+body.dark-mode .taskback:hover {
+    background-color: #001a0d;
+}
+
+/* completed tasks */
+body.dark-mode .completed {
+    background-color: #003d1a !important;
+    color: #00ff66 !important;
+}
+
+/* counter */
+body.dark-mode #taskCounter {
+    background-color: #000;
+    border: 2px solid #00ff66;
+    color: #00ff66;
+}
+
+/* h1 */
+body.dark-mode h1 {
+    color: #00ff66;
 }
